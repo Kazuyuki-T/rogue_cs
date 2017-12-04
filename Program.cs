@@ -12,8 +12,6 @@ namespace rogue_cui_cs_git
         {
             GameManager gm = new GameManager();
             gm.run();
-
-            //test
         }
     }
 }

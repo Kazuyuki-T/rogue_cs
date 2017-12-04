@@ -11,5 +11,13 @@ namespace rogue_cui_cs_git
         public Player() {
 
         }
+
+        public void setState() {
+
+        }
+
+        public int getAction() {
+            return 1;
+        }
     }
 }

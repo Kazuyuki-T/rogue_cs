@@ -8,22 +8,30 @@ namespace rogue_cui_cs_git
 {
     class GameManager
     {
-        State state;
-        Player player;
-        Rule rule;
+        private State state;
+        private Player player;
+        private Rule rule;
 
         public GameManager() {
-
-        }
-
-        public void init() {
             state = new State();
             player = new Player();
             rule = new Rule();
         }
 
-        public void run() {
+        public void init() {
+            
+        }
 
+        public void run() {
+            while (true) {
+                player.setState();
+                int act = player.getAction();
+                state.update(act);
+
+                if (state.getGameTurn() == 10) break;
+            }
+
+            System.Console.WriteLine("end");
         }
     }
 }
